@@ -13,21 +13,27 @@
 # Return the name of the author
 # Initiate a class => Author
 class Author
-    attr_accessor :name, :articles
+    attr_reader :name
+    @@all = []
     def initialize(name)
-        @name = name
-        @articles = []
-        # Print the name as an author
-        puts "My name is #{name}"
+      @name = name
+      @@all << self
+    end
+    def self.all
+      @@all
+    end
+    def articles
+      Article.all.select { |article| article.author == self }
+    end 
+    def magazines
+      articles.map { |article| article.magazine }.uniq
     end
     def add_article(magazine, title)
-        article = Article.new(self, magazine, title)
-        @articles << article
-        magazine.contributors << self
-        article
+      Article.new(self, magazine, title)
     end
     def topic_areas
-        magazines.map(&:category).uniq
+      magazines.map { |magazine| magazine.category }.uniq
     end
-end
-Ryan = Author.new("Ryan, an actor")
+  end
+  John = Author.new("Jane Doe")
+  puts John.name
