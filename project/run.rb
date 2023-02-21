@@ -1,4 +1,4 @@
-#!user/bin/env ruby
+
 require_relative '../project/Author.rb'
 require_relative '../project/Article.rb'
 require_relative '../project/Magazine.rb'
