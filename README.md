@@ -32,4 +32,4 @@ The application includes the following methods:
 
 ## AUTHOR: SPENCER MWENDA
 
-## License; MIT 
+## License: MIT 
