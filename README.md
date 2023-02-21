@@ -27,7 +27,7 @@ The application includes the following methods:
 ##  Magazine class:
 - initialize(name, category) - initializes a new magazine instance with the given name and category
 - name - returns the name of the magazine
-- Author - returns the name of the author
+- Article - returns the name of the article
 
 
 ## AUTHOR: SPENCER MWENDA
