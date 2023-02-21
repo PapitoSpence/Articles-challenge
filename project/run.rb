@@ -1,6 +1,7 @@
-require_relative 'author.rb'
-require_relative 'article.rb'
-require_relative 'magazine.rb'
+#!user/bin/env ruby
+require_relative '../project/Author.rb'
+require_relative '../project/Article.rb'
+require_relative '../project/Magazine.rb'
 author = Author.new("Jane Doe")
 magazine = Magazine.new("Vogue", "Fashion")
 article = Article.new("author", "magazine", "The Latest Fashion Trends")
